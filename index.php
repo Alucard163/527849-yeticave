@@ -43,8 +43,15 @@ $goods = [
         'image' => 'img/lot-6.jpg'
     ]
 ];
-$user_name = 'Roman'; // укажите здесь ваше имя
-$user_avatar = 'img/user.jpg';
+
+function sum_amt ($number) {
+    $sum = ceil($number);
+    if ($sum < 1000) {
+        return $sum;
+    } else {
+        return number_format($sum, 0, '.', ' ');
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -121,7 +128,7 @@ $user_avatar = 'img/user.jpg';
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= $good['price']?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= sum_amt($good['price'])?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
 
