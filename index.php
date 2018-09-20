@@ -45,8 +45,7 @@ $goods = [
 ];
 
 function sum_amt ($price) {
-    if ($price >= 1000) {
-    return number_format(ceil($price), 0, '.', ' '). " ₽";}
+    return number_format(ceil($price), 0, '.', ' '). " ₽";
 }
 ?>
 <!DOCTYPE html>
