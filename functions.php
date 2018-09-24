@@ -15,7 +15,7 @@ function include_template($name, $data) {
     return ob_get_clean();
 }
 /*Отсчет времени*/
-function lot_time_calc(/*$target = '23:59:59'*/) {
+function lot_time_calc() {
     $target_time = strtotime('tomorrow') - time();
     $hours = floor($target_time / 3600);
     $min = floor(($target_time % 3600) / 60);
