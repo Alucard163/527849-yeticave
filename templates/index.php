@@ -30,7 +30,7 @@
                                 <span class="lot__cost"><?= sum_amt($good['price'])?><b class="rub">р</b></span>
                             </div>
                             <div class="lot__timer timer">
-
+                                <?= lot_time_calc (); ?>
                             </div>
                         </div>
                     </div>
