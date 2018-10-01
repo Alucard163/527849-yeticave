@@ -28,7 +28,7 @@ INSERT INTO categories(name) VALUES ('Доски и лыжи'), ('Креплен
      LEFT JOIN rates r ON r.lot_id = l.id
      WHERE l.final_date > CURRENT_DATE
      GROUP BY l.id
-    ORDER BY l.id DESC;
+    ORDER BY l.id DESC LIMIT 6;
 -- показать лот по его id. Получите также название категории, к которой принадлежит лот
   SELECT l.id, l.name, c.name, l.description FROM lots l LEFT JOIN categories c ON l.category_id = c.id WHERE l.id = 2;
 -- обновить название лота по его идентификатору;
