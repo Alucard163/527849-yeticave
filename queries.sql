@@ -23,7 +23,7 @@ INSERT INTO categories(name) VALUES ('Доски и лыжи'), ('Креплен
 -- получить все категории;
    Select * FROM categories;
 -- получить самые новые, открытые лоты. Каждый лот должен включать название, стартовую цену, ссылку на изображение, цену, количество ставок, название категории;
-    SELECT * FROM lots WHERE final_date > CURRENT_DATE ;
+    SELECT l.id, l.name, l.start_price, l.pic, l.counter, l.description FROM lots l JOIN categories c ON l.category_id = c.id WHERE l.final_date > CURRENT_DATE ;
 -- показать лот по его id. Получите также название категории, к которой принадлежит лот
   SELECT name FROM lots WHERE id = 2;
 -- обновить название лота по его идентификатору;
