@@ -9,6 +9,8 @@ CREATE TABLE categories (
     name CHAR(128)
 );
 
+INSERT INTO categories(name) VALUES ('Доски и лыжи'), ('Крепления'), ('Ботинки'), ('Одежда'), ('Инструменты'), ('Разное');
+
 CREATE TABLE lots (
     id INT AUTO_INCREMENT PRIMARY KEY,
     create_date DATETIME,
