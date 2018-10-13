@@ -19,7 +19,7 @@
             <?php foreach ($goods as $good) :?>
                 <li class="lots__item lot">
                     <div class="lot__image">
-                        <img src="<?= $good['image']; ?>" width="350" height="260" alt="<?= $good['name'];?>">
+                        <img src="<?= $good['pic']; ?>" width="350" height="260" alt="<?= $good['name'];?>">
                     </div>
                     <div class="lot__info">
                         <span class="lot__category"><?= $good['category'];?></span>
@@ -27,7 +27,7 @@
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
-                                <span class="lot__cost"><?= sum_amt($good['price'])?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?= sum_amt($good['start_price'])?><b class="rub">р</b></span>
                             </div>
                             <div class="lot__timer timer">
                                 <?= lot_time_calc (); ?>
